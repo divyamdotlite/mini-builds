@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Graph AI | Analyse</title>
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-bar">
+            <a href="/" class="logo">
+                Scam Graph.<span class="ai-text">AI</span>
+            </a>
+
+            <a href="../index.html" class="back-link" >
+                <i class="ri-home-3-line"></i> Home
+            </a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- App Hero Section -->
+        <section class="app-section">
+            <div class="app-container">
+
+                <span class="tag">AI-Powered Scam Detection</span>
+
+                <h1>
+                    Analyse Suspicious <span>Messages</span>
+                </h1>
+
+                <p class="description">
+                    Upload a screenshot of a suspicious message to detect
+                    scam indicators and uncover connections between related reports.
+                </p>
+
+                <!-- Upload Form -->
+                <div class="upload-card">
+
+                    <h2>Upload Your Screenshot</h2>
+
+                    <p class="upload-description">
+                        Select an image containing a suspicious message.
+                        Our system will analyse it for potential scam indicators.
+                    </p>
+
+                    <form method="POST" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label for="file">Select Screenshot</label>
+
+                            <input
+                                type="file"
+                                id="file"
+                                name="file"
+                                accept="image/*"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="btn">
+                            Upload and Analyse <i class="ri-arrow-right-circle-line"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="results">
+
+            <div class="results-container">
+
+                <h2 class="results-heading">
+                    Analysis Results
+                </h2>
+
+                <div class="result-card">
+
+                    <h3 class="result-title">{{ result }}</h3>
+
+                    <p class="result-text">
+                        Confidence:
+                        <span class="confidence">{{ confidence }}%</span>
+                    </p>
+
+                    <div class="image-container">
+                        <img
+                            src="{{ file_path }}"
+                            class="result-image"
+                            alt="Uploaded suspicious message screenshot"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+
+            <div>
+                <div class="footer-logo">
+                    Scam Graph.<span class="ai-text">AI</span>
+                </div>
+
+                <p class="footer-text">
+                    An evidence-driven approach to connecting scam reports.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="mailto:divyamdotlite@gmail.com">Contact</a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
